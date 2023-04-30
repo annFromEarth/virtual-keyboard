@@ -487,7 +487,7 @@ const keys = [
 
     keyCode: 46,
     name: 'delete',
-    value: 'Del'
+    value: 'Del',
 
   },
 
@@ -495,7 +495,7 @@ const keys = [
 
     keyCode: 20,
     name: 'capslock',
-    value: 'Caps Lock'
+    value: 'Caps Lock',
 
   },
 
@@ -906,7 +906,7 @@ const keys = [
 
     keyCode: 17,
     name: 'ctrl_left',
-    value: 'Ctrl'
+    value: 'Ctrl',
 
   },
 
@@ -942,7 +942,7 @@ const keys = [
 
     keyCode: 18,
     name: 'alt_right',
-    value: 'Alt'
+    value: 'Alt',
 
   },
 
@@ -955,7 +955,7 @@ const keys = [
   {
     keyCode: 40,
     name: 'arrow_down',
-    value: `&#9662;`,
+    value: '&#9662;',
     shiftedValue: '&#9662;',
   },
   {

@@ -1,10 +1,8 @@
-console.log("Hello keyboard!");
-import { render_title } from './render_textarea.js';
-import { render_info } from './render_textarea.js';
-import { create_textarea } from './render_textarea.js';
-import { create_keyboard } from './render_keyboard.js';
+import { renderTitle, renderInfo, createTextarea } from './render_textarea.js';
 
-render_title();
-render_info();
-create_textarea();
-create_keyboard();
+import createKeyboard from './render_keyboard.js';
+
+renderTitle();
+renderInfo();
+createTextarea();
+createKeyboard();
