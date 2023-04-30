@@ -4,7 +4,7 @@ const keys = [
     keyCode: 192, // row 5
     en: {
       name: '`',
-      value: '`',
+      value: '~ \n `',
       shiftedValue: '~',
       isCapsed: false,
     },
@@ -236,24 +236,16 @@ const keys = [
   {
 
     keyCode: 8,
-    en: {
-      name: 'backspace',
-    },
-    ru: {
-      name: 'backspace',
-    },
+    name: 'backspace',
+    value: 'Backspace',
 
   },
 
   { // row 4
 
     keyCode: 9,
-    en: {
-      name: 'tab',
-    },
-    ru: {
-      name: 'tab',
-    },
+    name: 'tab',
+    value: '⭾',
 
   },
 
@@ -495,6 +487,7 @@ const keys = [
 
     keyCode: 46,
     name: 'delete',
+    value: 'Del'
 
   },
 
@@ -502,6 +495,7 @@ const keys = [
 
     keyCode: 20,
     name: 'capslock',
+    value: 'Caps Lock'
 
   },
 
@@ -707,16 +701,14 @@ const keys = [
 
     keyCode: 13,
     name: 'enter',
-    value: '&#8617;',
-    shiftedValue: '&#8617;',
+    value: 'Enter &#8617;',
 
   },
 
   { // row 2
     keyCode: 16,
-    name: 'shift',
-    value: '&#8679;',
-    type: 'left',
+    name: 'shift_left',
+    value: '&#8679; Shift',
   },
 
   {
@@ -899,45 +891,38 @@ const keys = [
 
   {
     keyCode: 38,
-    name: 'arrowUp',
+    name: 'arrow_up',
     value: '&#9652;',
     shiftedValue: '&#9652;',
   },
 
   {
     keyCode: 16,
-    name: 'shift',
-    value: '&#8679',
-    type: 'right',
+    name: 'shift_right',
+    value: '&#8679 Shift',
   },
 
   { // row 1
 
     keyCode: 17,
-    name: 'ctrl',
-    type: 'left',
-    value: '',
-    shiftedValue: '',
-    isCapsed: false,
+    name: 'ctrl_left',
+    value: 'Ctrl'
 
   },
 
   {
 
     keyCode: 91,
-    name: 'OS',
-    value: '',
-    shiftedValue: '',
-    isCapsed: false,
+    name: 'os',
+    value: '⊞',
 
   },
 
   {
 
     keyCode: 18,
-    name: 'alt',
-    type: 'left',
-    value: '',
+    name: 'alt_left',
+    value: 'Alt',
     shiftedValue: '',
     isCapsed: false,
 
@@ -946,8 +931,8 @@ const keys = [
   {
 
     keyCode: 32,
-    name: 'whitespace',
-    value: '',
+    name: 'space',
+    value: 'space',
     shiftedValue: '',
     isCapsed: false,
 
@@ -956,42 +941,36 @@ const keys = [
   {
 
     keyCode: 18,
-    name: 'alt',
-    type: 'right',
-    value: '',
-    shiftedValue: '',
-    isCapsed: false,
-
-  },
-
-  {
-
-    keyCode: 17,
-    name: 'ctrl',
-    type: 'right',
-    value: '',
-    shiftedValue: '',
-    isCapsed: false,
+    name: 'alt_right',
+    value: 'Alt'
 
   },
 
   {
     keyCode: 37,
-    name: 'arrowLeft',
+    name: 'arrow_left',
     value: '&#9666;',
     shiftedValue: '&#9666;',
   },
   {
     keyCode: 40,
-    name: 'arrowDown',
-    value: '&#9662;',
+    name: 'arrow_down',
+    value: `&#9662;`,
     shiftedValue: '&#9662;',
   },
   {
     keyCode: 39,
-    name: 'arrowRight',
+    name: 'arrow_right',
     value: '&#9656;',
     shiftedValue: '&#9656;',
+  },
+
+  {
+
+    keyCode: 17,
+    name: 'ctrl_right',
+    value: 'Ctrl',
+
   },
 
 ];
