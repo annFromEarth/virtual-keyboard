@@ -28,6 +28,8 @@ body * {
     border: black 1px solid;
     margin: 2vh auto;
     cursor: text;
+    overflow: hidden;
+    white-space: pre-wrap;
 }
 
 .keyboard {
@@ -56,7 +58,7 @@ body * {
     font-size: 0.9em;
     font-family:  'Inter', sans-serif;
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .key:hover {
@@ -98,5 +100,9 @@ body * {
 
 .space {
     grid-column-start: span 28;
-    color: rgba(255, 255, 255, 0);
+}
+
+.pressed {
+    border: rgb(2, 57, 240) 2px solid;
+    background: rgba(2, 2, 136, 0.8);
 }

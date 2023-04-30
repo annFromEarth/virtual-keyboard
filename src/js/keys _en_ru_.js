@@ -932,8 +932,8 @@ const keys = [
 
     keyCode: 32,
     name: 'space',
-    value: 'space',
-    shiftedValue: '',
+    value: ' ',
+    shiftedValue: ' ',
     isCapsed: false,
 
   },
