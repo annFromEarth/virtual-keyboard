@@ -3,6 +3,7 @@ import { getLocalStorage } from './localStorage.js';
 
 export function printReal() {
   const textArea = document.querySelector('.textarea');
+  textArea.innerText = "";
 
   function pressKey(event) {
     event.preventDefault();
@@ -14,17 +15,47 @@ export function printReal() {
     console.log(pressedKeyIndex);
 
     if (pressedKeyIndex === '13') { // backspace
-      textArea.innerText = textArea.innerText.split('').slice(0, textArea.innerText.length - 1).join('');
+
+        const textArray = textArea.innerHTML.split('');
+        const cursorPosition = textArea.selectionEnd;
+
+        if (textArea.selectionEnd === textArea.innerHTML.length) {
+            textArea.innerHTML = textArray.slice(0, textArea.selectionEnd - 1).join('');
+        } else {
+            textArea.innerHTML = textArray.slice(0, textArea.selectionEnd - 1).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
+        }
+
+        textArea.selectionEnd = cursorPosition-1;
+
+    } else if (pressedKeyIndex === '28') { // delete
+
+            const textArray = textArea.innerHTML.split('');
+            const cursorPosition = textArea.selectionEnd;
+    
+            if (textArea.selectionEnd === textArea.innerHTML.length) {
+                textArea.selectionStart = cursorPosition;
+                return;
+            } else {
+                textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(textArray.slice(textArea.selectionEnd+1, textArea.length)).join('');
+            }
+    
+            textArea.selectionEnd = cursorPosition;
+        
     } else if (pressedKeyIndex === '41') { // enter
-      textArea.innerText += '\n';
+      textArea.innerHTML += '\n';
     } else if (pressedKeyIndex === '14') { // tab
-      textArea.innerText += '\t';
+      textArea.innerHTML += '\t';
     } else if (pressedKeyIndex === '29') { // CAPSLOCK???????????
-      textArea.innerText += '2';
+      textArea.innerHTML += '';
     } else if (pressedKeyIndex === '42') { // shift?????????????????
-      textArea.innerText += '2';
+      textArea.innerHTML += '';
+    } else if (pressedKeyIndex === '57') { // alt???????????
+        textArea.innerHTML += '';
+    } else if (pressedKeyIndex === '55') { // ctrl???????????
+        textArea.innerHTML += '';
     } else {
-      textArea.innerText += `${event.key}`;
+      if (keys[pressedKeyIndex].value) {textArea.innerHTML += keys[pressedKeyIndex].value;
+    }else if (keys[pressedKeyIndex].en.value) {textArea.innerHTML += keys[pressedKeyIndex].en.value;}
     }
   }
 
