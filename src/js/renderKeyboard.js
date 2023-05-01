@@ -3,7 +3,7 @@ import { getLocalStorage } from './localStorage.js';
 
 function createKeyboard() {
   const wrapper = document.querySelector('.textarea_wrapper');
-  const lang = getLocalStorage();
+  const lang = getLocalStorage('lang');
   const keyboard = document.createElement('div');
   keyboard.className = 'keyboard';
   wrapper.append(keyboard);

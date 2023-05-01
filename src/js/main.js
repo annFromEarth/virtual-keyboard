@@ -2,9 +2,9 @@ import { renderTitle, renderInfo, createTextarea } from './renderTextarea.js';
 
 import createKeyboard from './renderKeyboard.js';
 
-import { printReal } from './useRealKeyboard.js';
+import printReal from './useRealKeyboard.js';
 
-import { printVirtual } from './useVirtualKeyboard.js';
+import printVirtual from './useVirtualKeyboard.js';
 
 renderTitle();
 renderInfo();

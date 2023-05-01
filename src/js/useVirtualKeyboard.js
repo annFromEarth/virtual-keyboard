@@ -1,11 +1,13 @@
 import keys from './keysSource.js';
-import { getLocalStorage } from './localStorage.js';
+import { setLocalStorage, getLocalStorage } from './localStorage.js';
+import changeLanguage from './changeLanguage.js';
 
-export function printVirtual() {
+function printVirtual() {
   const textArea = document.querySelector('.textarea');
   let previousKey = '';
 
   function pressKeyVirtual(event) {
+    const lang = getLocalStorage('lang');
     const keyboard = document.querySelector('.keyboard');
     const shiftKey = document.querySelector('[data-index="42"]');
     const capsLock = document.querySelector('[data-index="29"]');
@@ -82,8 +84,22 @@ export function printVirtual() {
         pressedKey.classList.toggle('active');
         previousKey = `${pressedKeyIndex}`;
       } else if (pressedKeyIndex === '57') { // alt???????????
+        if (previousKey === '55') {
+          if (lang === 'en') {
+            setLocalStorage('lang', 'ru');
+          } else if (lang === 'ru') { setLocalStorage('lang', 'en'); }
+
+          changeLanguage();
+        }
         previousKey = `${pressedKeyIndex}`;
       } else if (pressedKeyIndex === '55') { // ctrl???????????
+        if (previousKey === '57') {
+          if (lang === 'en') {
+            setLocalStorage('lang', 'ru');
+          } else if (lang === 'ru') { setLocalStorage('lang', 'en'); }
+          changeLanguage();
+        }
+
         previousKey = `${pressedKeyIndex}`;
       } else if (textArea.selectionEnd === textArea.innerHTML.length) { // regular buttons
         if (keys[pressedKeyIndex].value) {
@@ -92,8 +108,8 @@ export function printVirtual() {
           } else { textArea.innerHTML += keys[pressedKeyIndex].value; }
         } else if (keys[pressedKeyIndex].en.value) {
           if (shiftKey.classList.contains('active') || capsLock.classList.contains('active')) {
-            textArea.innerHTML += keys[pressedKeyIndex].en.shiftedValue;
-          } else { textArea.innerHTML += keys[pressedKeyIndex].en.value; }
+            textArea.innerHTML += keys[pressedKeyIndex][lang].shiftedValue;
+          } else { textArea.innerHTML += keys[pressedKeyIndex][lang].value; }
         }
       } else if (textArea.selectionEnd !== textArea.innerHTML.length) {
         const textArray = textArea.innerHTML.split('');
@@ -106,9 +122,9 @@ export function printVirtual() {
           }
         } else if (keys[pressedKeyIndex].en.value) {
           if (shiftKey.classList.contains('active') || capsLock.classList.contains('active')) {
-            textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(`${keys[pressedKeyIndex].en.shiftedValue}`).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
+            textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(`${keys[pressedKeyIndex][lang].shiftedValue}`).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
           } else {
-            textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(`${keys[pressedKeyIndex].en.value}`).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
+            textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(`${keys[pressedKeyIndex][lang].value}`).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
           }
         }
         textArea.selectionEnd = cursorPosition + 1;
@@ -126,3 +142,5 @@ export function printVirtual() {
 
   document.addEventListener('mousedown', pressKeyVirtual);
 }
+
+export default printVirtual;

@@ -20,18 +20,9 @@ const keys = [
   {
 
     keyCode: 49,
-    en: {
-      name: '1',
-      value: '1',
-      shiftedValue: '!',
-      isCapsed: false,
-    },
-    ru: {
-      name: '1',
-      value: '1',
-      shiftedValue: '!',
-      isCapsed: false,
-    },
+    name: '1',
+    value: '1',
+    shiftedValue: '!',
 
   },
 
@@ -42,13 +33,13 @@ const keys = [
       name: '2',
       value: '2',
       shiftedValue: '@',
-      isCapsed: false,
+
     },
     ru: {
       name: '2',
       value: '2',
       shiftedValue: '"',
-      isCapsed: false,
+
     },
 
   },
@@ -60,13 +51,13 @@ const keys = [
       name: '3',
       value: '3',
       shiftedValue: '#',
-      isCapsed: false,
+
     },
     ru: {
       name: '3',
       value: '3',
       shiftedValue: '№',
-      isCapsed: false,
+
     },
 
   },
@@ -78,13 +69,13 @@ const keys = [
       name: '4',
       value: '4',
       shiftedValue: '#',
-      isCapsed: false,
+
     },
     ru: {
       name: '4',
       value: '4',
       shiftedValue: '№',
-      isCapsed: false,
+
     },
 
   },
@@ -96,13 +87,13 @@ const keys = [
       name: '5',
       value: '5',
       shiftedValue: '%',
-      isCapsed: false,
+
     },
     ru: {
       name: '5',
       value: '5',
       shiftedValue: '%',
-      isCapsed: false,
+
     },
 
   },
@@ -114,13 +105,13 @@ const keys = [
       name: '6',
       value: '6',
       shiftedValue: '^',
-      isCapsed: false,
+
     },
     ru: {
       name: '6',
       value: '6',
       shiftedValue: ':',
-      isCapsed: false,
+
     },
 
   },
@@ -132,13 +123,13 @@ const keys = [
       name: '7',
       value: '7',
       shiftedValue: '&',
-      isCapsed: false,
+
     },
     ru: {
       name: '7',
       value: '7',
       shiftedValue: '?',
-      isCapsed: false,
+
     },
 
   },
@@ -146,90 +137,45 @@ const keys = [
   {
 
     keyCode: 56,
-    en: {
-      name: '8',
-      value: '8',
-      shiftedValue: '*',
-      isCapsed: false,
-    },
-    ru: {
-      name: '8',
-      value: '8',
-      shiftedValue: '*',
-      isCapsed: false,
-    },
+    name: '8',
+    value: '8',
+    shiftedValue: '*',
 
   },
 
   {
 
     keyCode: 57,
-    en: {
-      name: '9',
-      value: '9',
-      shiftedValue: '(',
-      isCapsed: false,
-    },
-    ru: {
-      name: '9',
-      value: '9',
-      shiftedValue: '(',
-      isCapsed: false,
-    },
+    name: '9',
+    value: '9',
+    shiftedValue: '(',
 
   },
 
   {
 
     keyCode: 48,
-    en: {
-      name: '0',
-      value: '0',
-      shiftedValue: ')',
-      isCapsed: false,
-    },
-    ru: {
-      name: '0',
-      value: '0',
-      siftedValue: ')',
-      isCapsed: false,
-    },
+    name: '0',
+    value: '0',
+    shiftedValue: ')',
 
   },
 
   {
 
     keyCode: 173,
-    en: {
-      name: '-',
-      value: '-',
-      shiftedValue: '_',
-      isCapsed: false,
-    },
-    ru: {
-      name: '-',
-      value: '-',
-      shiftedValue: '_',
-      isCapsed: false,
-    },
+    name: '-',
+    value: '-',
+    shiftedValue: '_',
 
   },
 
   {
 
     keyCode: 61,
-    en: {
-      name: '=',
-      value: '=',
-      shiftedValue: '+',
-      isCapsed: false,
-    },
-    ru: {
-      name: '=',
-      value: '=',
-      shiftedValue: '+',
-      isCapsed: false,
-    },
+    name: '=',
+    value: '=',
+    shiftedValue: '+',
 
   },
 
