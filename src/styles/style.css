@@ -34,6 +34,7 @@ body * {
     border: black 1px solid;
     overflow: hidden;
     white-space: pre-wrap;
+    font-size: 1.3wh;
 }
 
 .keyboard {
@@ -59,7 +60,7 @@ body * {
     border: rgba(255, 255, 255, 0.5)  2px solid;
     color: whitesmoke;
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 1.2vh;
     font-family:  'Inter', sans-serif;
     font-weight: 500;
     transition: 0.2s;
