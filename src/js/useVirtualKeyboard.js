@@ -77,7 +77,7 @@ function printVirtual() {
 
         textArea.selectionEnd = cursorPosition + 1;
         previousKey = `${pressedKeyIndex}`;
-      } else if (pressedKeyIndex === '29') { // CAPSLOCK
+      } else if (pressedKeyIndex === '29') { // capslock
         pressedKey.classList.toggle('active');
         previousKey = `${pressedKeyIndex}`;
       } else if (pressedKeyIndex === '42') { // shift
