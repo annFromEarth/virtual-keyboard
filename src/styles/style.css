@@ -32,8 +32,6 @@ body * {
     margin: 2vh auto;
     padding: 2vh;
     border: black 1px solid;
-    /* margin: 2vh auto; */
-    /* cursor: text; */
     overflow: hidden;
     white-space: pre-wrap;
 }

@@ -85,7 +85,7 @@ function printReal() {
     } else if (pressedKeyIndex === '42') { // shift
       pressedKey.classList.toggle('active');
       previousKey = `${pressedKeyIndex}`;
-    } else if (pressedKeyIndex === '57') { // alt???????????
+    } else if (pressedKeyIndex === '57') { // alt?
       if (previousKey === '55') {
         if (lang === 'en') {
           setLocalStorage('lang', 'ru');
@@ -94,7 +94,7 @@ function printReal() {
         changeLanguage();
       }
       previousKey = `${pressedKeyIndex}`;
-    } else if (pressedKeyIndex === '55') { // ctrl???????????
+    } else if (pressedKeyIndex === '55') { // ctrl?
       if (previousKey === '57') {
         if (lang === 'en') {
           setLocalStorage('lang', 'ru');

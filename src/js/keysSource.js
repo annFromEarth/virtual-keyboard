@@ -819,7 +819,7 @@ const keys = [
 
   {
 
-    keyCode: 191, // 190 remains for russian????
+    keyCode: 191, // 190 remains for russian?
     en: {
       name: '/',
       value: '/',
