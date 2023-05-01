@@ -34,6 +34,7 @@ body * {
     border: black 1px solid;
     overflow: hidden;
     white-space: pre-wrap;
+    font-size: 1.3wh;
 }
 
 .keyboard {
@@ -43,9 +44,9 @@ body * {
     border-radius: 20px;
     width: fit-content;
     display: grid;
-    grid-template-columns: repeat(60, calc(40px / 8)); /*dig*/
-    grid-template-rows: repeat(5, 40px);
-    gap: calc(40px / 6);
+    grid-template-columns: repeat(60, calc(5vh / 8)); /*dig*/
+    grid-template-rows: repeat(5, 5vh);
+    gap: calc(5vh / 6);
     cursor: pointer;
 }
 
@@ -59,7 +60,7 @@ body * {
     border: rgba(255, 255, 255, 0.5)  2px solid;
     color: whitesmoke;
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 1.8vh;
     font-family:  'Inter', sans-serif;
     font-weight: 500;
     transition: 0.2s;
@@ -76,7 +77,7 @@ body * {
 .arrow_right,
 .arrow_up,
 .arrow_down {
-    font-size: 2em;
+    font-size: 3.5vh;
 }
 
 .delete,
