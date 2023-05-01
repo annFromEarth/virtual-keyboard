@@ -4,7 +4,7 @@ const keys = [
     keyCode: 192, // row 5
     en: {
       name: '`',
-      value: '~ \n `',
+      value: '`',
       shiftedValue: '~',
       isCapsed: false,
     },
