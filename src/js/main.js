@@ -1,6 +1,6 @@
-import { renderTitle, renderInfo, createTextarea } from './render_textarea.js';
+import { renderTitle, renderInfo, createTextarea } from './renderTextarea.js';
 
-import createKeyboard from './render_keyboard.js';
+import createKeyboard from './renderKeyboard.js';
 
 import { printReal } from './useRealKeyboard.js';
 

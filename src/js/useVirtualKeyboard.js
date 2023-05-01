@@ -1,4 +1,4 @@
-import keys from './keys _en_ru_.js';
+import keys from './keysSource.js';
 import { getLocalStorage } from './localStorage.js';
 
 export function printVirtual() {
