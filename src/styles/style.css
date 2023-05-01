@@ -113,3 +113,9 @@ body * {
     background: rgba(2, 2, 136, 0.8);
     opacity: 1;
 }
+
+.key.active {
+    border: rgb(2, 240, 129) 2px solid;
+    background: rgba(2, 2, 136, 0.8);
+    opacity: 1;
+}
