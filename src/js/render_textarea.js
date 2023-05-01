@@ -14,6 +14,6 @@ export function renderTitle() {
 export function renderInfo() {
   const info = document.createElement('div');
   info.className = 'info';
-  info.innerText = '* created in Windows OS \n* for language change press Shift+Alt';
+  info.innerText = '* created in Windows OS \n* for language change press CTRL+ALT';
   document.body.append(info);
 }
