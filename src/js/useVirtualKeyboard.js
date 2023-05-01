@@ -10,6 +10,8 @@ export function printVirtual() {
     const shiftKey = document.querySelector('[data-index="42"]');
     const capsLock = document.querySelector('[data-index="29"]');
 
+    if (event.target.classList.contains('keyboard')) { return; }
+
     if (event.composedPath().includes(keyboard)) {
       event.preventDefault();
 
