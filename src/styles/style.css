@@ -111,6 +111,14 @@ body * {
     border: rgb(2, 240, 129) 2px solid;
     background: rgba(2, 2, 136, 0.8);
     opacity: 1;
+    transform: scale(0.95);
+}
+
+.key.space.pressed {
+    border: rgb(2, 240, 129) 2px solid;
+    background: rgba(2, 2, 136, 0.8);
+    opacity: 1;
+    transform: scale(0.99, 0.95);
 }
 
 .key.active {
