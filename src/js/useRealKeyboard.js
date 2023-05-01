@@ -4,9 +4,13 @@ import changeLanguage from './changeLanguage.js';
 
 function printReal() {
   const textArea = document.querySelector('.textarea');
+  const availableKeyCodes = keys.map((x) => x.keyCode);
+
   let previousKey = '';
 
   function pressKey(event) {
+    if (!availableKeyCodes.includes(event.which)) { return; }
+
     const lang = getLocalStorage('lang');
     const shiftKey = document.querySelector('[data-index="42"]');
     const capsLock = document.querySelector('[data-index="29"]');
@@ -141,6 +145,7 @@ function printReal() {
 
   function releaseKey(event) {
     event.preventDefault();
+    if (!availableKeyCodes.includes(event.which)) { return; }
 
     const releasedKey = document.getElementById(`${event.which}`);
     releasedKey.classList.remove('pressed');
