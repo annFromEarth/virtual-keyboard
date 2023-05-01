@@ -21,13 +21,19 @@ body * {
     font-weight: 500;
 }
 
-.textarea {
+.textarea_wrapper{
     width: 900px;
-    height: 30vh;
+    margin: 2vh auto;
+}
+
+.textarea {
+    width: 100%;
+    height: 100%;
+    margin: 2vh auto;
     padding: 2vh;
     border: black 1px solid;
-    margin: 2vh auto;
-    cursor: text;
+    /* margin: 2vh auto; */
+    /* cursor: text; */
     overflow: hidden;
     white-space: pre-wrap;
 }

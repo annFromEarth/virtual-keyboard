@@ -1,7 +1,11 @@
 export function createTextarea() {
-  const textarea = document.createElement('div');
+  const textareaWrapper = document.createElement('div');
+  textareaWrapper.className = 'textarea_wrapper';
+  document.body.append(textareaWrapper);
+
+  const textarea = document.createElement('textarea');
   textarea.className = 'textarea';
-  document.body.append(textarea);
+  textareaWrapper.append(textarea);
 }
 
 export function renderTitle() {

@@ -2,10 +2,11 @@ import keys from './keys _en_ru_.js';
 import { getLocalStorage } from './localStorage.js';
 
 function createKeyboard() {
+  const wrapper = document.querySelector('.textarea_wrapper');
   const lang = getLocalStorage();
   const keyboard = document.createElement('div');
   keyboard.className = 'keyboard';
-  document.body.append(keyboard);
+  wrapper.append(keyboard);
 
   let elementIndex = 0;
 

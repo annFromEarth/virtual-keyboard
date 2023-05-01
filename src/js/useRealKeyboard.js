@@ -14,11 +14,11 @@ export function printReal() {
     console.log(pressedKeyIndex);
 
     if (pressedKeyIndex === '13') { // backspace
-        textArea.innerText = textArea.innerText.split('').slice(0, textArea.innerText.length-1).join('')
+      textArea.innerText = textArea.innerText.split('').slice(0, textArea.innerText.length - 1).join('');
     } else if (pressedKeyIndex === '41') { // enter
       textArea.innerText += '\n';
     } else if (pressedKeyIndex === '14') { // tab
-        textArea.innerText += '\t';
+      textArea.innerText += '\t';
     } else if (pressedKeyIndex === '29') { // CAPSLOCK???????????
       textArea.innerText += '2';
     } else if (pressedKeyIndex === '42') { // shift?????????????????
