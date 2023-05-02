@@ -861,6 +861,7 @@ const keys = [
     keyCode: 91,
     name: 'os',
     value: '⊞',
+    shiftedValue: '⊞',
 
   },
 
