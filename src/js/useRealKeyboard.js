@@ -22,22 +22,21 @@ function printReal() {
 
     pressedKey.classList.add('pressed');
 
+    const textArray = textArea.innerHTML.split('');// intro1
+    let cursorPosition = textArea.selectionEnd;
+    textArea.selectionStart = cursorPosition;
+
     if (pressedKeyIndex === '13') { // backspace
-      const textArray = textArea.innerHTML.split('');
-      const cursorPosition = textArea.selectionEnd;
       if (textArea.selectionEnd === textArea.innerHTML.length) {
         textArea.innerHTML = textArray.slice(0, textArea.selectionEnd - 1).join('');
       } else {
         textArea.innerHTML = textArray.slice(0, textArea.selectionEnd - 1).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
       }
 
-      textArea.selectionStart = cursorPosition - 1;
-      textArea.selectionEnd = cursorPosition - 1;
-
+      cursorPosition -= 1;// post1
+      textArea.selectionStart = cursorPosition;
       previousKey = `${pressedKeyIndex}`;
     } else if (pressedKeyIndex === '28') { // delete
-      const textArray = textArea.innerHTML.split('');
-      const cursorPosition = textArea.selectionEnd;
       if (textArea.selectionEnd === textArea.innerHTML.length) {
         textArea.selectionStart = cursorPosition;
         return;
@@ -45,43 +44,36 @@ function printReal() {
       textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(textArray.slice(textArea.selectionEnd + 1, textArea.length)).join('');
 
       textArea.selectionStart = cursorPosition;
-      textArea.selectionEnd = cursorPosition;
       previousKey = `${pressedKeyIndex}`;
     } else if (pressedKeyIndex === '58') { // space
-      const textArray = textArea.innerHTML.split('');
-      const cursorPosition = textArea.selectionEnd;
       if (textArea.selectionEnd === textArea.innerHTML.length) {
         textArea.innerHTML += ' ';
       } else {
         textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(' ').concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
       }
 
-      textArea.selectionStart = cursorPosition + 1;
-      textArea.selectionEnd = cursorPosition + 1;
+      cursorPosition += 1;// post1
+      textArea.selectionStart = cursorPosition;
       previousKey = `${pressedKeyIndex}`;
     } else if (pressedKeyIndex === '41') { // enter
-      const textArray = textArea.innerHTML.split('');
-      const cursorPosition = textArea.selectionEnd;
       if (textArea.selectionEnd === textArea.innerHTML.length) {
         textArea.innerHTML += '\n';
       } else {
         textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat('\n').concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
       }
 
-      textArea.selectionStart = cursorPosition + 1;
-      textArea.selectionEnd = cursorPosition + 1;
+      cursorPosition += 1;// post1
+      textArea.selectionStart = cursorPosition;
       previousKey = `${pressedKeyIndex}`;
     } else if (pressedKeyIndex === '14') { // tab
-      const textArray = textArea.innerHTML.split('');
-      const cursorPosition = textArea.selectionEnd;
       if (textArea.selectionEnd === textArea.innerHTML.length) {
         textArea.innerHTML += '\t';
       } else {
         textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat('\t').concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
       }
 
-      textArea.selectionStart = cursorPosition + 1;
-      textArea.selectionEnd = cursorPosition + 1;
+      cursorPosition += 1;// post1
+      textArea.selectionStart = cursorPosition;
       previousKey = `${pressedKeyIndex}`;
     } else if (pressedKeyIndex === '29') { // capslock
       pressedKey.classList.toggle('active');
@@ -117,9 +109,10 @@ function printReal() {
           textArea.innerHTML += keys[pressedKeyIndex][lang].shiftedValue;
         } else { textArea.innerHTML += keys[pressedKeyIndex][lang].value; }
       }
+
+      cursorPosition += 1;// post1
+      textArea.selectionStart = cursorPosition;
     } else if (textArea.selectionEnd !== textArea.innerHTML.length) {
-      const textArray = textArea.innerHTML.split('');
-      const cursorPosition = textArea.selectionEnd;
       if (keys[pressedKeyIndex].value) {
         if (shiftKey.classList.contains('active') || capsLock.classList.contains('active')) {
           textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(`${keys[pressedKeyIndex].shiftedValue}`).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
@@ -133,8 +126,8 @@ function printReal() {
           textArea.innerHTML = textArray.slice(0, textArea.selectionEnd).concat(`${keys[pressedKeyIndex][lang].value}`).concat(textArray.slice(textArea.selectionEnd, textArea.length)).join('');
         }
       }
-      textArea.selectionStart = cursorPosition + 1;
-      textArea.selectionEnd = cursorPosition + 1;
+      cursorPosition += 1;// post1
+      textArea.selectionStart = cursorPosition;
     }
 
     if (pressedKeyIndex !== '42') { shiftKey.classList.remove('active'); }
