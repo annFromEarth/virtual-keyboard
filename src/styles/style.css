@@ -107,11 +107,25 @@ body * {
     grid-column-start: span 28;
 }
 
+@keyframes pressingDown {
+    from {
+      transform: scale(100%);
+    }
+  
+    to {
+        transform: scale(95%);
+    }
+  }
+  
+
 .key.pressed {
     border: rgb(2, 240, 129) 2px solid;
     background: rgba(2, 2, 136, 0.8);
     opacity: 1;
-    transform: translate(0.12vh, 0.12vh);
+    animation-duration: 0.2s;
+    animation-direction: alternate;
+    animation-name: pressingDown;
+    animation-iteration-count: 2;
 }
 
 .key.active {
