@@ -17,6 +17,8 @@ function printVirtual() {
     if (event.composedPath().includes(keyboard)) {
       event.preventDefault();
 
+      textArea.focus();
+
       const pressedKey = document.getElementById(`${event.target.id}`);
       const pressedKeyIndex = pressedKey.dataset.index;
 
