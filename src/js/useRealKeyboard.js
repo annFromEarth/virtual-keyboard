@@ -17,6 +17,8 @@ function printReal() {
 
     event.preventDefault();
 
+    textArea.focus();
+
     const pressedKey = document.getElementById(`${event.which}`);
     const pressedKeyIndex = pressedKey.dataset.index;
 
