@@ -37,6 +37,7 @@ function printVirtual() {
 
         cursorPosition -= 1;// post1
         textArea.selectionStart = cursorPosition;
+        textArea.selectionEnd = cursorPosition;
         previousKey = `${pressedKeyIndex}`;
       } else if (pressedKeyIndex === '28') { // delete
         if (textArea.selectionEnd === textArea.innerHTML.length) {
